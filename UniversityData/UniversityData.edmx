@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="UniversityDataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="UniversityDataModelStoreContainer">
+          <EntitySet Name="UniversityDetails" EntityType="UniversityDataModel.Store.UniversityDetails" store:Type="Tables" store:Schema="dbo" store:Name="UniversityDetails">
+            <DefiningQuery>SELECT 
+      [UniversityDetails].[ID] AS [ID], 
+      [UniversityDetails].[UNITID] AS [UNITID], 
+      [UniversityDetails].[INSTNM] AS [INSTNM], 
+      [UniversityDetails].[ADDR] AS [ADDR], 
+      [UniversityDetails].[CITY] AS [CITY], 
+      [UniversityDetails].[STABBR] AS [STABBR], 
+      [UniversityDetails].[ZIP] AS [ZIP], 
+      [UniversityDetails].[FIPS] AS [FIPS], 
+      [UniversityDetails].[OBEREG] AS [OBEREG], 
+      [UniversityDetails].[CHFNM] AS [CHFNM], 
+      [UniversityDetails].[CHFTITLE] AS [CHFTITLE], 
+      [UniversityDetails].[GENTELE] AS [GENTELE], 
+      [UniversityDetails].[FAXTELE] AS [FAXTELE], 
+      [UniversityDetails].[EIN] AS [EIN], 
+      [UniversityDetails].[OPEID] AS [OPEID], 
+      [UniversityDetails].[OPEFLAG] AS [OPEFLAG], 
+      [UniversityDetails].[WEBADDR] AS [WEBADDR], 
+      [UniversityDetails].[ADMINURL] AS [ADMINURL], 
+      [UniversityDetails].[FAIDURL] AS [FAIDURL], 
+      [UniversityDetails].[NPRICURL] AS [NPRICURL], 
+      [UniversityDetails].[SECTOR] AS [SECTOR], 
+      [UniversityDetails].[ICLEVEL] AS [ICLEVEL], 
+      [UniversityDetails].[CONTROL] AS [CONTROL], 
+      [UniversityDetails].[HLOFFER] AS [HLOFFER], 
+      [UniversityDetails].[UGOFFER] AS [UGOFFER], 
+      [UniversityDetails].[GROFFER] AS [GROFFER], 
+      [UniversityDetails].[HDEGOFR1] AS [HDEGOFR1], 
+      [UniversityDetails].[DEGGRANT] AS [DEGGRANT], 
+      [UniversityDetails].[HBCU] AS [HBCU], 
+      [UniversityDetails].[HOSPITAL] AS [HOSPITAL], 
+      [UniversityDetails].[MEDICAL] AS [MEDICAL], 
+      [UniversityDetails].[TRIBAL] AS [TRIBAL], 
+      [UniversityDetails].[LOCALE] AS [LOCALE], 
+      [UniversityDetails].[OPENPUBL] AS [OPENPUBL], 
+      [UniversityDetails].[ACT] AS [ACT], 
+      [UniversityDetails].[NEWID] AS [NEWID], 
+      [UniversityDetails].[DEATHYR] AS [DEATHYR], 
+      [UniversityDetails].[CLOSEDAT] AS [CLOSEDAT], 
+      [UniversityDetails].[CYACTIVE] AS [CYACTIVE], 
+      [UniversityDetails].[POSTSEC] AS [POSTSEC], 
+      [UniversityDetails].[PSEFLAG] AS [PSEFLAG], 
+      [UniversityDetails].[PSET4FLG] AS [PSET4FLG], 
+      [UniversityDetails].[RPTMTH] AS [RPTMTH], 
+      [UniversityDetails].[IALIAS] AS [IALIAS], 
+      [UniversityDetails].[INSTCAT] AS [INSTCAT], 
+      [UniversityDetails].[CCBASIC] AS [CCBASIC], 
+      [UniversityDetails].[CCIPUG] AS [CCIPUG], 
+      [UniversityDetails].[CCIPGRAD] AS [CCIPGRAD], 
+      [UniversityDetails].[CCUGPROF] AS [CCUGPROF], 
+      [UniversityDetails].[CCENRPRF] AS [CCENRPRF], 
+      [UniversityDetails].[CCSIZSET] AS [CCSIZSET], 
+      [UniversityDetails].[CARNEGIE] AS [CARNEGIE], 
+      [UniversityDetails].[LANDGRNT] AS [LANDGRNT], 
+      [UniversityDetails].[INSTSIZE] AS [INSTSIZE], 
+      [UniversityDetails].[CBSA] AS [CBSA], 
+      [UniversityDetails].[CBSATYPE] AS [CBSATYPE], 
+      [UniversityDetails].[CSA] AS [CSA], 
+      [UniversityDetails].[NECTA] AS [NECTA], 
+      [UniversityDetails].[F1SYSTYP] AS [F1SYSTYP], 
+      [UniversityDetails].[F1SYSNAM] AS [F1SYSNAM], 
+      [UniversityDetails].[F1SYSCOD] AS [F1SYSCOD], 
+      [UniversityDetails].[COUNTYCD] AS [COUNTYCD], 
+      [UniversityDetails].[COUNTYNM] AS [COUNTYNM], 
+      [UniversityDetails].[CNGDSTCD] AS [CNGDSTCD], 
+      [UniversityDetails].[LONGITUD] AS [LONGITUD], 
+      [UniversityDetails].[LATITUDE] AS [LATITUDE]
+      FROM [dbo].[UniversityDetails] AS [UniversityDetails]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'UniversityData.dbo.UniversityDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="UniversityDetails">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UNITID" Type="float" />
+          <Property Name="INSTNM" Type="nvarchar" MaxLength="255" />
+          <Property Name="ADDR" Type="nvarchar" MaxLength="255" />
+          <Property Name="CITY" Type="nvarchar" MaxLength="255" />
+          <Property Name="STABBR" Type="nvarchar" MaxLength="255" />
+          <Property Name="ZIP" Type="nvarchar" MaxLength="255" />
+          <Property Name="FIPS" Type="float" />
+          <Property Name="OBEREG" Type="float" />
+          <Property Name="CHFNM" Type="nvarchar" MaxLength="255" />
+          <Property Name="CHFTITLE" Type="nvarchar" MaxLength="255" />
+          <Property Name="GENTELE" Type="float" />
+          <Property Name="FAXTELE" Type="float" />
+          <Property Name="EIN" Type="float" />
+          <Property Name="OPEID" Type="float" />
+          <Property Name="OPEFLAG" Type="float" />
+          <Property Name="WEBADDR" Type="nvarchar" MaxLength="255" />
+          <Property Name="ADMINURL" Type="nvarchar" MaxLength="255" />
+          <Property Name="FAIDURL" Type="nvarchar" MaxLength="255" />
+          <Property Name="NPRICURL" Type="nvarchar" MaxLength="255" />
+          <Property Name="SECTOR" Type="float" />
+          <Property Name="ICLEVEL" Type="float" />
+          <Property Name="CONTROL" Type="float" />
+          <Property Name="HLOFFER" Type="float" />
+          <Property Name="UGOFFER" Type="float" />
+          <Property Name="GROFFER" Type="float" />
+          <Property Name="HDEGOFR1" Type="float" />
+          <Property Name="DEGGRANT" Type="float" />
+          <Property Name="HBCU" Type="float" />
+          <Property Name="HOSPITAL" Type="float" />
+          <Property Name="MEDICAL" Type="float" />
+          <Property Name="TRIBAL" Type="float" />
+          <Property Name="LOCALE" Type="float" />
+          <Property Name="OPENPUBL" Type="float" />
+          <Property Name="ACT" Type="nvarchar" MaxLength="255" />
+          <Property Name="NEWID" Type="float" />
+          <Property Name="DEATHYR" Type="float" />
+          <Property Name="CLOSEDAT" Type="float" />
+          <Property Name="CYACTIVE" Type="float" />
+          <Property Name="POSTSEC" Type="float" />
+          <Property Name="PSEFLAG" Type="float" />
+          <Property Name="PSET4FLG" Type="float" />
+          <Property Name="RPTMTH" Type="float" />
+          <Property Name="IALIAS" Type="nvarchar" MaxLength="255" />
+          <Property Name="INSTCAT" Type="float" />
+          <Property Name="CCBASIC" Type="float" />
+          <Property Name="CCIPUG" Type="float" />
+          <Property Name="CCIPGRAD" Type="float" />
+          <Property Name="CCUGPROF" Type="float" />
+          <Property Name="CCENRPRF" Type="float" />
+          <Property Name="CCSIZSET" Type="float" />
+          <Property Name="CARNEGIE" Type="float" />
+          <Property Name="LANDGRNT" Type="float" />
+          <Property Name="INSTSIZE" Type="float" />
+          <Property Name="CBSA" Type="float" />
+          <Property Name="CBSATYPE" Type="float" />
+          <Property Name="CSA" Type="float" />
+          <Property Name="NECTA" Type="float" />
+          <Property Name="F1SYSTYP" Type="float" />
+          <Property Name="F1SYSNAM" Type="nvarchar" MaxLength="255" />
+          <Property Name="F1SYSCOD" Type="float" />
+          <Property Name="COUNTYCD" Type="float" />
+          <Property Name="COUNTYNM" Type="nvarchar" MaxLength="255" />
+          <Property Name="CNGDSTCD" Type="float" />
+          <Property Name="LONGITUD" Type="float" />
+          <Property Name="LATITUDE" Type="float" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="UniversityDataModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="UniversityDataEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="UniversityDetails" EntityType="UniversityDataModel.UniversityDetail" />
+        </EntityContainer>
+        <EntityType Name="UniversityDetail">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="UNITID" Type="Double" />
+          <Property Name="INSTNM" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ADDR" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CITY" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="STABBR" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ZIP" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="FIPS" Type="Double" />
+          <Property Name="OBEREG" Type="Double" />
+          <Property Name="CHFNM" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CHFTITLE" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="GENTELE" Type="Double" />
+          <Property Name="FAXTELE" Type="Double" />
+          <Property Name="EIN" Type="Double" />
+          <Property Name="OPEID" Type="Double" />
+          <Property Name="OPEFLAG" Type="Double" />
+          <Property Name="WEBADDR" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ADMINURL" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="FAIDURL" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="NPRICURL" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="SECTOR" Type="Double" />
+          <Property Name="ICLEVEL" Type="Double" />
+          <Property Name="CONTROL" Type="Double" />
+          <Property Name="HLOFFER" Type="Double" />
+          <Property Name="UGOFFER" Type="Double" />
+          <Property Name="GROFFER" Type="Double" />
+          <Property Name="HDEGOFR1" Type="Double" />
+          <Property Name="DEGGRANT" Type="Double" />
+          <Property Name="HBCU" Type="Double" />
+          <Property Name="HOSPITAL" Type="Double" />
+          <Property Name="MEDICAL" Type="Double" />
+          <Property Name="TRIBAL" Type="Double" />
+          <Property Name="LOCALE" Type="Double" />
+          <Property Name="OPENPUBL" Type="Double" />
+          <Property Name="ACT" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="NEWID" Type="Double" />
+          <Property Name="DEATHYR" Type="Double" />
+          <Property Name="CLOSEDAT" Type="Double" />
+          <Property Name="CYACTIVE" Type="Double" />
+          <Property Name="POSTSEC" Type="Double" />
+          <Property Name="PSEFLAG" Type="Double" />
+          <Property Name="PSET4FLG" Type="Double" />
+          <Property Name="RPTMTH" Type="Double" />
+          <Property Name="IALIAS" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="INSTCAT" Type="Double" />
+          <Property Name="CCBASIC" Type="Double" />
+          <Property Name="CCIPUG" Type="Double" />
+          <Property Name="CCIPGRAD" Type="Double" />
+          <Property Name="CCUGPROF" Type="Double" />
+          <Property Name="CCENRPRF" Type="Double" />
+          <Property Name="CCSIZSET" Type="Double" />
+          <Property Name="CARNEGIE" Type="Double" />
+          <Property Name="LANDGRNT" Type="Double" />
+          <Property Name="INSTSIZE" Type="Double" />
+          <Property Name="CBSA" Type="Double" />
+          <Property Name="CBSATYPE" Type="Double" />
+          <Property Name="CSA" Type="Double" />
+          <Property Name="NECTA" Type="Double" />
+          <Property Name="F1SYSTYP" Type="Double" />
+          <Property Name="F1SYSNAM" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="F1SYSCOD" Type="Double" />
+          <Property Name="COUNTYCD" Type="Double" />
+          <Property Name="COUNTYNM" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="CNGDSTCD" Type="Double" />
+          <Property Name="LONGITUD" Type="Double" />
+          <Property Name="LATITUDE" Type="Double" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="UniversityDataModelStoreContainer" CdmEntityContainer="UniversityDataEntities">
+          <EntitySetMapping Name="UniversityDetails">
+            <EntityTypeMapping TypeName="UniversityDataModel.UniversityDetail">
+              <MappingFragment StoreEntitySet="UniversityDetails">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UNITID" ColumnName="UNITID" />
+                <ScalarProperty Name="INSTNM" ColumnName="INSTNM" />
+                <ScalarProperty Name="ADDR" ColumnName="ADDR" />
+                <ScalarProperty Name="CITY" ColumnName="CITY" />
+                <ScalarProperty Name="STABBR" ColumnName="STABBR" />
+                <ScalarProperty Name="ZIP" ColumnName="ZIP" />
+                <ScalarProperty Name="FIPS" ColumnName="FIPS" />
+                <ScalarProperty Name="OBEREG" ColumnName="OBEREG" />
+                <ScalarProperty Name="CHFNM" ColumnName="CHFNM" />
+                <ScalarProperty Name="CHFTITLE" ColumnName="CHFTITLE" />
+                <ScalarProperty Name="GENTELE" ColumnName="GENTELE" />
+                <ScalarProperty Name="FAXTELE" ColumnName="FAXTELE" />
+                <ScalarProperty Name="EIN" ColumnName="EIN" />
+                <ScalarProperty Name="OPEID" ColumnName="OPEID" />
+                <ScalarProperty Name="OPEFLAG" ColumnName="OPEFLAG" />
+                <ScalarProperty Name="WEBADDR" ColumnName="WEBADDR" />
+                <ScalarProperty Name="ADMINURL" ColumnName="ADMINURL" />
+                <ScalarProperty Name="FAIDURL" ColumnName="FAIDURL" />
+                <ScalarProperty Name="NPRICURL" ColumnName="NPRICURL" />
+                <ScalarProperty Name="SECTOR" ColumnName="SECTOR" />
+                <ScalarProperty Name="ICLEVEL" ColumnName="ICLEVEL" />
+                <ScalarProperty Name="CONTROL" ColumnName="CONTROL" />
+                <ScalarProperty Name="HLOFFER" ColumnName="HLOFFER" />
+                <ScalarProperty Name="UGOFFER" ColumnName="UGOFFER" />
+                <ScalarProperty Name="GROFFER" ColumnName="GROFFER" />
+                <ScalarProperty Name="HDEGOFR1" ColumnName="HDEGOFR1" />
+                <ScalarProperty Name="DEGGRANT" ColumnName="DEGGRANT" />
+                <ScalarProperty Name="HBCU" ColumnName="HBCU" />
+                <ScalarProperty Name="HOSPITAL" ColumnName="HOSPITAL" />
+                <ScalarProperty Name="MEDICAL" ColumnName="MEDICAL" />
+                <ScalarProperty Name="TRIBAL" ColumnName="TRIBAL" />
+                <ScalarProperty Name="LOCALE" ColumnName="LOCALE" />
+                <ScalarProperty Name="OPENPUBL" ColumnName="OPENPUBL" />
+                <ScalarProperty Name="ACT" ColumnName="ACT" />
+                <ScalarProperty Name="NEWID" ColumnName="NEWID" />
+                <ScalarProperty Name="DEATHYR" ColumnName="DEATHYR" />
+                <ScalarProperty Name="CLOSEDAT" ColumnName="CLOSEDAT" />
+                <ScalarProperty Name="CYACTIVE" ColumnName="CYACTIVE" />
+                <ScalarProperty Name="POSTSEC" ColumnName="POSTSEC" />
+                <ScalarProperty Name="PSEFLAG" ColumnName="PSEFLAG" />
+                <ScalarProperty Name="PSET4FLG" ColumnName="PSET4FLG" />
+                <ScalarProperty Name="RPTMTH" ColumnName="RPTMTH" />
+                <ScalarProperty Name="IALIAS" ColumnName="IALIAS" />
+                <ScalarProperty Name="INSTCAT" ColumnName="INSTCAT" />
+                <ScalarProperty Name="CCBASIC" ColumnName="CCBASIC" />
+                <ScalarProperty Name="CCIPUG" ColumnName="CCIPUG" />
+                <ScalarProperty Name="CCIPGRAD" ColumnName="CCIPGRAD" />
+                <ScalarProperty Name="CCUGPROF" ColumnName="CCUGPROF" />
+                <ScalarProperty Name="CCENRPRF" ColumnName="CCENRPRF" />
+                <ScalarProperty Name="CCSIZSET" ColumnName="CCSIZSET" />
+                <ScalarProperty Name="CARNEGIE" ColumnName="CARNEGIE" />
+                <ScalarProperty Name="LANDGRNT" ColumnName="LANDGRNT" />
+                <ScalarProperty Name="INSTSIZE" ColumnName="INSTSIZE" />
+                <ScalarProperty Name="CBSA" ColumnName="CBSA" />
+                <ScalarProperty Name="CBSATYPE" ColumnName="CBSATYPE" />
+                <ScalarProperty Name="CSA" ColumnName="CSA" />
+                <ScalarProperty Name="NECTA" ColumnName="NECTA" />
+                <ScalarProperty Name="F1SYSTYP" ColumnName="F1SYSTYP" />
+                <ScalarProperty Name="F1SYSNAM" ColumnName="F1SYSNAM" />
+                <ScalarProperty Name="F1SYSCOD" ColumnName="F1SYSCOD" />
+                <ScalarProperty Name="COUNTYCD" ColumnName="COUNTYCD" />
+                <ScalarProperty Name="COUNTYNM" ColumnName="COUNTYNM" />
+                <ScalarProperty Name="CNGDSTCD" ColumnName="CNGDSTCD" />
+                <ScalarProperty Name="LONGITUD" ColumnName="LONGITUD" />
+                <ScalarProperty Name="LATITUDE" ColumnName="LATITUDE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
