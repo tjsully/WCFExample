@@ -9,6 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Cont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceHost", "ServiceHost\ServiceHost.csproj", "{A818BF3D-B3D0-4253-9BA9-084E94FEFA10}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B504C605-45DB-44A4-AA37-CE915AD0E073}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversityServiceUnitTests", "UniversityServiceUnitTests\UniversityServiceUnitTests.csproj", "{1B7A015A-BE96-4E54-858A-293163845C03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +38,10 @@ Global
 		{A818BF3D-B3D0-4253-9BA9-084E94FEFA10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A818BF3D-B3D0-4253-9BA9-084E94FEFA10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A818BF3D-B3D0-4253-9BA9-084E94FEFA10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B7A015A-BE96-4E54-858A-293163845C03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B7A015A-BE96-4E54-858A-293163845C03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B7A015A-BE96-4E54-858A-293163845C03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B7A015A-BE96-4E54-858A-293163845C03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

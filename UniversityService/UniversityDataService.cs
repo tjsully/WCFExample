@@ -11,14 +11,21 @@ namespace UniversityService
 {
     public class UniversityDataService : IUniversityDataService
     {
+        private readonly IUniversityDataRepository _repository;
+        
+        public UniversityDataService(IUniversityDataRepository repository)
+        {
+            _repository = repository;
+        }
+
         IEnumerable<Contracts.UniversityData> IUniversityDataService.GetAll()
         {
             IEnumerable<Contracts.UniversityData> detail = new List<Contracts.UniversityData>();
 
             try
             {
-                IUniversityDataRepository repository = new UniversityDataRepository();
-                detail = repository.GetAllData();
+                //IUniversityDataRepository repository = new UniversityDataRepository();
+                detail = _repository.GetAllData();
             }
             catch
             {
@@ -39,12 +46,12 @@ namespace UniversityService
 
             try
             {
-                IUniversityDataRepository repository = new UniversityDataRepository();
-                detail = repository.GetDataByName(namePart.Trim());
+                //IUniversityDataRepository repository = new UniversityDataRepository();
+                detail = _repository.GetDataByName(namePart.Trim());
             }
-            catch
+            catch (Exception e)
             {
-                throw new FaultException<Contracts.UniversityServiceFault>(new Contracts.UniversityServiceFault { Message = "communication error" }, "error accessing data");
+                throw new FaultException<Contracts.UniversityServiceFault>(new Contracts.UniversityServiceFault { Message = "communication error" }, e.Message);
             }
             return detail;
         }
@@ -65,12 +72,12 @@ namespace UniversityService
 
             try
             {
-                IUniversityDataRepository repository = new UniversityDataRepository();
-                detail = repository.GetDataByState(stAbbr);
+                //IUniversityDataRepository repository = new UniversityDataRepository();
+                detail = _repository.GetDataByState(stAbbr);
             }
-            catch
+            catch (Exception e)
             {
-                throw new FaultException<Contracts.UniversityServiceFault>(new Contracts.UniversityServiceFault { Message = "communication error" }, "error accessing data");
+                throw new FaultException<Contracts.UniversityServiceFault>(new Contracts.UniversityServiceFault { Message = "communication error" }, e.Message);
             }
             return detail;
         }
